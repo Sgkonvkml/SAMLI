@@ -520,7 +520,7 @@ body.subpage main .container .inner .tbl_content {
 .inner + .inner {
   margin-top: 50px;
   padding-top: 50px;
-  border-top: 1px solid #b8944d;
+  border-top: 1px solid #fff4e0;
 }
 
 .inner .box.gallery {
