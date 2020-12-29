@@ -1,0 +1,233 @@
+///layout 공통
+#wrap{
+  width: 1320px;
+  margin: 0 auto;
+  #header{
+    position: relative;
+    height: 60px;
+    #top_logo{
+      float: left;
+      a{
+        height: 60px;
+        line-height: 60px;
+        font-family: $fontFamilyBody;
+      }
+    }
+    //top menu 구현
+    #top_nav{
+      position: relative;
+      height: 60px;
+      float: right;
+      ul{
+        float: left;
+        li{
+          position: relative;
+          float: left;
+          margin-left: 30px;
+          &:first-child{
+            margin-left: 0;
+          }
+          a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            line-height: 60px;
+            height: 60px;
+          }
+          &:hover{
+            .sub_menu{
+              visibility: visible;
+              top: 100%;
+              opacity: 1;
+            }
+          }
+          //submenu 구현
+          .sub_menu{
+            position: absolute;
+            border: 1px solid $borderColorPrimary;
+            visibility: hidden;
+            top: calc( 100% - 3px );
+            opacity: 0;
+            transition: .5s;
+            z-index: 500;
+            li{
+              width: 100%;
+              margin: 0;
+              background: white;
+              box-sizing: border-box;
+              padding: 0 10px;
+              width: 100%;
+              min-width: 150px;
+              transition: .5s;
+              z-index: 500;
+              a{
+                line-height: 40px;
+                height: 40px;
+              }
+              &:hover{
+                background: $gbtnColor;
+                a{
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #footer{
+    color: $fontColorPrimary;
+    font-size: 14px;
+    .footer_top{
+      padding: 60px 0 30px;
+    }
+    .container{
+      margin: 0 auto;
+      width: 100%;
+      .row{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .column{
+          flex: 25%;
+          box-sizing: border-box;
+          padding: 0 30px;
+          margin-bottom: 30px;
+          &:nth-child(1){
+            flex: 100px;
+          }
+          &.footer_logo h3{
+            font-size: 34px;
+            margin: 0 0 20px 0;
+            padding: 2px 0 2px 0;
+            line-height: 1;
+            font-weight: 700;
+          }
+          h4{
+            position: relative;
+            font-size: 14px;
+            font-weight: 700;/* 700 = bold */
+            color: $fontColorPrimary;
+            text-transform: uppercase;/*대문자 표기*/
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            &:before,&:after{
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              height: 3px;
+            }
+            &:before{
+              right: 0;
+              background: $borderColorDark;
+            }
+            &:after{
+              width: 90px;
+              background: $borderColorPrimary;
+            }
+          }
+          ul{
+            li{
+              border-bottom: 1px solid $borderColorPrimary;
+              padding: 10px 0;
+              &:nth-child(1){
+                padding-top: 0;
+              }
+            }
+          }
+          p{
+            line-height: 26px;
+          }
+          &.news input{
+            &[type=search]{
+              border: 0;
+              padding: 6px 8px;
+              width: 65%;
+              border-top: 1px solid $borderColorlight;
+              border-left: 1px solid $borderColorlight;
+              border-bottom: 1px solid $borderColorlight;
+              border-radius: 3px 0 0 3px;
+            }
+            &[type=submit]{
+              border: 0;
+              width: 35%;
+              padding: 6px 0;
+              text-align: center;
+              color: #ffffff;
+              border-radius: 0 3px 3px 0;
+              background: $gbtnColor;
+              border: 1px solid $borderColorPrimary;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    & > .container{
+      padding: 30px 0;
+      text-align: center;
+    }
+  }
+
+  /*반응형 css*/
+  @media screen and ( max-width: 1200px ) {
+    section .row .column{
+      flex: 50%;
+    }
+    section#myprofile .row .column .inner img{
+      width: 30%;
+    }
+    #footer .container{
+      width: 100%;
+    }
+    #footer .container .row .column{
+      flex: 50%;
+    }
+  }
+
+  @media screen and ( max-width: 767px ) {
+    section .row .column{
+      flex: 100%;
+    }
+    section#ourclients .row .column, section#mytool .row .column{
+      flex: 50%;
+    }
+    #footer .container .row .column{
+      flex: 100%;
+    }
+    /*mobile gnb*/
+    input[type=checkbox]#gnbcheck:checked ~ #header #gnb{
+      left: 0;
+    }
+
+    #gnbbtn{
+      display: block;
+    }
+
+    #gnb{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+      width: 80%;
+      background: rgba(0,0,0,.8);
+      transition: .5s ease-in-out;
+    }
+
+    #gnb ul{
+      padding-top: 50px;
+    }
+
+    #gnb ul li{
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 10px;
+    }
+
+    #header{
+      position: absolute;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <title>SAMLI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+     <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+ </head>
+ <body>
+   <div id="wrap">
+    <header id="header">
+      <h1 id="top_logo"><a href="index.html">SAMLI</a></h1>
+      <nav id="top_nav">
+        <ul>
+          <li><a href="company/introduce.html">COMPANY</a>
+            <ul class="sub_menu">
+              <li><a href="company/introduce.html">Introduce</a></li>
+              <li><a href="company/history.html">History</a></li>
+            </ul>
+          </li>
+          <li><a href="brand/brand.html">BRAND</a>
+            <ul class="sub_menu">
+              <li><a href="brand/brand.html">SAMLI</a></li>
+              <li><a href="brand/chacha.html">CHACHA</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery/gallery.html">GALLERY</a></li>
+          <li><a href="community/notice.html">COMMUNITY</a>
+            <ul class="sub_menu">
+              <li><a href="community/notice.html">Notice</a></li>
+              <li><a href="community/faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="location/location.html">LOCATION</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--메인배너-->
+      <div class="mainbanner"></div>
+      <!--컨텐츠 영역-->
+      <div class="container">
+        <div class="content">
+          <div class="inner">
+            <div class="box items_2">
+              <div class="items">
+                <h3 class="title">SAMLI's story</h3>
+                <p>SAMLI's relentless efforts have been made for high-quality bread. New methods have been developed, such as the “human dough method,” in which molded dough is rapidly frozen and baked directly at the store, and the “wave baking method,” in which the fermented product is baked in half and the rest of the process can be processed at the store. By building trust and developing technology with a differentiated logistics system and the best ingredients, SAMLI, a bakery that you can meet anywhere, was born.</p>
+                <a href="company/introduce.html" class="gbtn">More View</a>
+              </div>
+              <div class="items">
+                <img src="img/brand/brand_07.jpg" alt="thumb01">
+              </div>
+            </div>
+          </div>
+          <div class="inner">
+            <div class="box items_2">
+              <div class="items">
+                <img src="img/brand/bread_01.jpg" alt="thumb02">
+              </div>
+              <div class="items">
+                <h3 class="title">SAMLI's bread</h3>
+                <p>Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <a href="gallery/gallery.html" class="gbtn">More View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="footer_top">
+        <!-- footer 상단 영역 -->
+        <div class="container">
+          <div class="row">
+            <div class="column footer_logo">
+              <!-- footer logo -->
+              <h3>SAMLI</h3>
+            </div>
+            <div class="column">
+              <!-- site map -->
+              <h4>site map</h4>
+              <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="company/introduce.html">Company</a></li>
+                <li><a href="brand/brand.html">Brand</a></li>
+                <li><a href="gallery/gallery.html">Gallery</a></li>
+                <li><a href="community/notice.html">Community</a></li>
+                <li><a href="location/location.html">Location</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <!-- contact us -->
+              <h4>contact us</h4>
+              <p>
+                A108 Adam street <br>
+                New York, NY 535022 <br>
+                United states <br>
+                <strong>phone&nbsp;:</strong><a href="tel:+82-010-0000-0000">+82-010-0000-0000</a><br>
+                <strong>Email&nbsp;:</strong><a href="mailto:mymail@naver.com">mymail@naver.com</a><br>
+              </p>
+            </div>
+            <div class="column news">
+              <!-- news -->
+              <h4>news</h4>
+              <news-component></news-component>
+              <form action="">
+                <input type="search" name="search"><input type="submit" value="search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!-- footer 하단 영역 -->
+        <div class="copyright">
+          ⓒcopyright <strong>SAMLI</strong> .All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed By <a href="mailto:aaa@naver.com">Myself</a>
+        </div>
+      </div>
+    </footer>
+   </div>
+ </body>
+ </html>

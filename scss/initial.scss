@@ -1,0 +1,38 @@
+html,body{
+  height: 100%;
+}
+
+body{
+  background: $layoutBg;
+  color: $fontColorBasic;
+  font-family: $fontFamilyP;
+}
+
+html,body,ul,li,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $fontFamilyBody;
+}
+
+li{
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $fontColorPrimary;
+  transition: .5s;
+  &:hover{
+    color: $fontColorHover;
+  }
+  font-family: $fontFamilyP;
+  font-weight: 600;
+}
+
+p{
+  font-family: $fontFamilyP;
+  font-weight: 300;
+}

@@ -1,0 +1,10 @@
+body.subpage main .container {
+  display: flex;
+}
+
+body.subpage main .container #lnb {
+  flex: 200px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding-right: 20px;
+}

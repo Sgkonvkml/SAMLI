@@ -1,0 +1,141 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <title>Location</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+     <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+ </head>
+ <body class="subpage">
+   <div id="wrap">
+     <header id="header">
+       <h1 id="top_logo"><a href="../index.html">SAMLI</a></h1>
+       <nav id="top_nav">
+         <ul>
+           <li><a href="../company/introduce.html">COMPANY</a>
+             <ul class="sub_menu">
+               <li><a href="../company/introduce.html">Introduce</a></li>
+               <li><a href="../company/history.html">History</a></li>
+             </ul>
+           </li>
+           <li><a href="../brand/brand.html">BRAND</a>
+             <ul class="sub_menu">
+               <li><a href="../brand/brand.html">SAMLI</a></li>
+               <li><a href="../brand/chacha.html">CHACHA</a></li>
+             </ul>
+           </li>
+           <li><a href="../gallery/gallery.html">GALLERY</a></li>
+           <li><a href="../community/notice.html">COMMUNITY</a>
+             <ul class="sub_menu">
+               <li><a href="../community/notice.html">Notice</a></li>
+               <li><a href="../community/faq.html">FAQ</a></li>
+             </ul>
+           </li>
+           <li><a href="../location/location.html">LOCATION</a></li>
+         </ul>
+       </nav>
+     </header>
+    <main>
+      <!--컨텐츠 영역-->
+      <div class="container">
+        <!--왼쪽메뉴-->
+        <aside id="lnb">
+          <ul>
+            <li><a class="on" href="../location/location.html">Location</a></li>
+          </ul>
+        </aside>
+        <!--컨텐츠 본문-->
+        <div class="content">
+          <h2 class="sub_title"><span>Location</span></h2>
+          <div class="inner">
+            <!-- map -->
+              <div id="map" style="width:1000px;height:350px;margin:50px auto 0;"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="footer_top">
+        <!-- footer 상단 영역 -->
+        <div class="container">
+          <div class="row">
+            <div class="column footer_logo">
+              <!-- footer logo -->
+              <h3>SAMLI</h3>
+            </div>
+            <div class="column">
+              <!-- site map -->
+              <h4>site map</h4>
+              <ul>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="../company/introduce.html">Company</a></li>
+                <li><a href="../brand/brand.html">Brand</a></li>
+                <li><a href="../gallery/gallery.html">Gallery</a></li>
+                <li><a href="../community/notice.html">Community</a></li>
+                <li><a href="../location/location.html">Location</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <!-- contact us -->
+              <h4>contact us</h4>
+              <p>
+                A108 Adam street <br>
+                New York, NY 535022 <br>
+                United states <br>
+                <strong>phone&nbsp;:</strong><a href="tel:+82-010-0000-0000">+82-010-0000-0000</a><br>
+                <strong>Email&nbsp;:</strong><a href="mailto:mymail@naver.com">mymail@naver.com</a><br>
+              </p>
+            </div>
+            <div class="column news">
+              <!-- news -->
+              <h4>news</h4>
+              <news-component></news-component>
+              <form action="">
+                <input type="search" name="search"><input type="submit" value="search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!-- footer 하단 영역 -->
+        <div class="copyright">
+          ⓒcopyright <strong>SAMLI</strong> .All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed By <a href="mailto:aaa@naver.com">Myself</a>
+        </div>
+      </div>
+    </footer>
+   </div>
+   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e2c8f64b1de2bf6ca77a29279f6d5465"></script>
+   <script>
+     var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+     mapOption = {
+       center: new kakao.maps.LatLng(36.00055036198403, 128.40509194020453), // 지도의 중심좌표
+       level: 3 // 지도의 확대 레벨
+     };
+
+     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+     // 마커가 표시될 위치입니다
+     var markerPosition  = new kakao.maps.LatLng(36.00055036198403, 128.40509194020453);
+
+     // 마커를 생성합니다
+     var marker = new kakao.maps.Marker({
+       position: markerPosition
+     });
+
+     // 마커가 지도 위에 표시되도록 설정합니다
+     marker.setMap(map);
+
+     // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+     // marker.setMap(null);
+   </script>
+ </body>
+ </html>
