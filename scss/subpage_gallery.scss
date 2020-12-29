@@ -3,7 +3,7 @@
   & + .inner{
     margin-top: 50px;
     padding-top: 50px;
-    border-top: 1px solid $layoutBg;
+    border-top: 1px solid $borderColorPrimary;
   }
   .box.gallery{
     flex-wrap: wrap;
@@ -33,7 +33,7 @@
                 box-sizing: border-box;
                 width: 100%;
                 height: 100%;
-                border: 3px solid #fff;
+                border: 3px solid $layoutBg;
               }
             }
           }
@@ -57,7 +57,7 @@
       img{
         width: 700px;
         position: absolute;
-        border: 3px solid #fff;
+        border: 3px solid $layoutBg;
       }
     }
   }
